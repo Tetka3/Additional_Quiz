@@ -1,0 +1,19 @@
+text = ['What is the capital city of Kenya? ', 
+        'How many continent are in the world map? ',
+        'Where do you live? ']
+response = ['Nairobi', '7', 'London']
+
+corr_responses = 0
+for i in range(len(text)):
+    guess = input(text[i])
+    if guess.lower() == response[i].lower():
+        print('Correct')
+        corr_responses = corr_responses + 1
+    else: 
+        print('Wrong! Correct answer is ', response[i])
+        
+print('You got ', corr_responses, 'answers correct out of ', i+1)
+if corr_responses == 3:
+    print('Congrats! You qualify')
+else:
+    print('Disqualified')
